@@ -1,0 +1,42 @@
+.App-header {
+  background-color: #282c34;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 5rem;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 10px;
+}
+
+.App-logo {
+  width: 180px;
+  padding: .6em;
+}
+.header-link {
+  padding: 30px 20px;
+  /* justify-content: center; */
+  position: relative;
+  /* top: 35%; */
+  text-decoration: none;
+  color: white;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.sign-in-button {
+  border-radius: 34px;
+  padding: 10px 30px;
+  margin: 15px;
+  margin-left: auto;
+  color: white;
+  background-color: #1977f3;
+  font-size: 18px;
+  /* box-shadow: 2px 2px 4px #000000; */
+}
