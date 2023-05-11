@@ -14,10 +14,12 @@
 }
 
 .App-logo {
-  width: 140px;
-  height: auto;
-  margin: 1rem;
+  width: 120px;
+  height: 100%;
+  object-fit: contain;
+  margin: 1.2rem;
 }
+
 .header-link {
   padding: 25px;
   /* margin: 20px; */
@@ -28,7 +30,6 @@
 
 .header-links {
   margin: 20px;
-
 }
 
 .right {
@@ -43,7 +44,6 @@
   color: white;
   background-color: #1977f3;
   font-size: 18px;
-  /* box-shadow: 2px 2px 4px #000000; */
 }
 
 .dropdown-menu {
@@ -53,27 +53,26 @@
 /* Media query for mobile screens */
 @media (max-width: 600px) {
   .App-header {
-  background-color: #282c34;
-  display: flex;
+    background-color: #282c34;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
   }
-  
+
   .App-logo {
     width: 100px;
   }
-  
+
   .header-links {
     position: relative;
   }
-  
+
   .dropdown-menu {
     display: contents;
     cursor: pointer;
     padding: 5px;
   }
-  
+
   /* .dropdown-icon {
     display: block;
     width: 20px;
@@ -81,7 +80,7 @@
     background-color: #333;
     margin-bottom: 4px;
   } */
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -92,16 +91,16 @@
     background-color: #282c34;
     border-color: #f1f1f1;
   }
-  
+
   .header-links.open .dropdown-content {
     display: block;
   }
-  
+
   .header-link {
     display: block;
     margin-bottom: 10px;
   }
-  
+
   .sign-in-button {
     margin-left: 10px;
   }
