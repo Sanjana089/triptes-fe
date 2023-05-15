@@ -7,6 +7,7 @@
 }
 
 .image-container {
+  /* flex: 1; */
   flex: 0 0 auto;
   margin-right: 16px;
 }
@@ -61,7 +62,7 @@
     margin-right: 16px;
   }
 
-  .centered-image {
+  .tour-image {
     max-width: 100%;
     max-height: 100%;
     display: block;
