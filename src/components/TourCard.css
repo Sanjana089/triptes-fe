@@ -1,4 +1,4 @@
-.card {
+.tour-card {
   display: flex;
   background-color: #ffffff;
   border-radius: 8px;
@@ -7,7 +7,6 @@
 }
 
 .image-container {
-  /* flex: 1; */
   flex: 0 0 auto;
   margin-right: 16px;
 }
@@ -22,12 +21,14 @@
   flex: 1;
 }
 
-.title {
-  font-size: 32px;
+.tour-card-title {
+  font-size: 2.5rem;
   font-weight: bold;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
-.subtitle {
+.tour-card-subtitle {
   font-size: 16px;
   color: #555555;
 }
@@ -49,9 +50,15 @@
   color: #888888;
 }
 
+@media (max-width: 1000px) {
+
+  .tour-card-title {
+    font-size: 2rem;
+  }
+}
 /* Media query for mobile screens */
 @media (max-width: 600px) {
-  .card {
+  .tour-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,5 +74,9 @@
     max-height: 100%;
     display: block;
     margin: auto;
+  }
+
+  .tour-card-subtitle {
+    font-size: 12px;
   }
 }
