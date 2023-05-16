@@ -2,12 +2,15 @@ import Header from "../Header";
 import "./Home.css";
 import Tours from "../data/Tours.json"
 import TourCard from "./TourCard";
+import Carousel from "./Carousel";
 
 const Home = () => {
   return (
     <div className="Home">
       <Header></Header>
       <br />
+      <Carousel/>
+      <br/>
       <h1>Ongoing</h1>
       {Tours.map((tour, i) => (
         <TourCard
@@ -20,6 +23,7 @@ const Home = () => {
           image={tour.image}
         />
       ))}
+      <br />
     </div>
   );
 };
