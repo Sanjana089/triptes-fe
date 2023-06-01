@@ -7,8 +7,11 @@
 }
 
 .image-container {
+  display: flex;
   flex: 0 0 auto;
   margin-right: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
 .tour-image {
@@ -51,24 +54,18 @@
 }
 
 @media (max-width: 1000px) {
-
   .tour-card-title {
     font-size: 2rem;
   }
-}
-/* Media query for mobile screens */
-@media (max-width: 600px) {
   .tour-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 1rem 2rem;
   }
+}
 
-  .image-container {
-    flex: 0 0 auto;
-    margin-right: 16px;
-  }
-
+@media (max-width: 800px) {
   .tour-image {
     max-width: 100%;
     max-height: 100%;
@@ -76,6 +73,9 @@
     margin: auto;
   }
 
+  .tour-card-title {
+    margin: 1rem 0rem;
+  }
   .tour-card-subtitle {
     font-size: 12px;
   }

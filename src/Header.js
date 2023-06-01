@@ -4,15 +4,20 @@ import React, { useState } from "react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div className="App-header">
-      <img src="./logo3.png" className="App-logo" alt="logo" />
+      <a href="/">
+    <img src="./logo3.png" className="App-logo" alt="logo" />
+  </a>
       <div className={`header-links ${isMenuOpen ? "open" : ""}`}>
         <div className="dropdown-menu" onClick={toggleMenu}>
-          <span className="dropdown-icon">
-            {isMenuOpen ? <span>Menu &#8744;</span> : <span>Menu &#62;</span>}
+          <span className={`dropdown-icon ${isMenuOpen ? "open" : ""}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+            {/* {isMenuOpen ? <span></span> : <span>Menu &#62;</span>} */}
           </span>
         </div>
         <div className="dropdown-content">
@@ -25,11 +30,11 @@ export default function Header() {
           <a className="header-link" href="/contactus">
             Contact Us
           </a>
-        </div>
-      </div>
       <button className="sign-in-button right" type="submit">
         Sign In
       </button>
+      </div>
+      </div>
     </div>
   );
 }

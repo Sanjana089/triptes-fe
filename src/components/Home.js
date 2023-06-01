@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="Home">
       <Header></Header>
-      <br />
+      {/* <br /> */}
       <Carousel/>
       <br/>
       <h1>Ongoing</h1>
