@@ -38,9 +38,9 @@ export default function Header() {
         <a href="/" className="App-logo-link-mobile">
           <img src="./logo3.png" className="App-logo" alt="logo" />
         </a>
-        <button className="sign-in-button right" type="submit">
-          Sign In
-        </button>
+        <span className="sign-in-button right" type="submit">
+          <a href="/signIn" className="sign-in-link">Sign In</a>
+        </span>
       </div>
     </div>
   );

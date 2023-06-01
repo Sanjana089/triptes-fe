@@ -44,6 +44,11 @@
   font-size: 18px;
 }
 
+.sign-in-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .dropdown-menu, .App-logo-link-mobile, .close-button {
   display: none;
 }
