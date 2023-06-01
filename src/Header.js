@@ -39,7 +39,7 @@ export default function Header() {
           <img src="./logo3.png" className="App-logo" alt="logo" />
         </a>
         <span className="sign-in-button right" type="submit">
-          <a href="/signIn" className="sign-in-link">Sign In</a>
+          <a href="/signin" className="sign-in-link">Sign In</a>
         </span>
       </div>
     </div>

@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 import Header from "../Header";
-import "./SignIn.css"; // Import the CSS file for styling
+import "./SignUp.css"; // Import the CSS file for styling
 
-const SignIn = () => {
+const SignUp = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic for handling sign-in form submission
+    // Logic for handling sign-up form submission
   };
 
   return (
     <>
       <Header />
-      <div className="signin-container">
-        <h2>Sign In</h2>
-        <form onSubmit={handleSubmit} className="signin-form">
+      <div className="signup-container">
+        <h2>Sign Up</h2>
+        <form onSubmit={handleSubmit} className="signup-form">
           <div className="form-group">
-            {/* <label htmlFor="email">Email</label> */}
             <input
-              placeholder="Email"
+            placeholder="Name"
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <input
+            placeholder="Email"
               type="email"
               id="email"
               value={email}
@@ -29,9 +39,8 @@ const SignIn = () => {
             />
           </div>
           <div className="form-group">
-            {/* <label htmlFor="password">Password</label>     */}
             <input
-              placeholder="Password"
+            placeholder="Password"
               type="password"
               id="password"
               value={password}
@@ -39,23 +48,16 @@ const SignIn = () => {
               required
             />
           </div>
-            <a href="/password-reset" className="password-reset-link">
-            Forgot Password?
-          </a>
-          <button type="submit" className="signin-button">
-            Sign In
+          <button type="submit" className="signup-button">
+            Sign Up
           </button>
         </form>
-
         <p className="signup-text">
-        
-          <a href="/signup" className="signup-text-link">
-            Didn't get tript yet? Create Account
-          </a>
+        <a href="/signIn"  className="signup-text-link">Already Have an Account? Sign In</a>
         </p>
       </div>
     </>
   );
 };
 
-export default SignIn;
+export default SignUp;
