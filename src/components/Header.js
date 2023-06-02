@@ -24,6 +24,7 @@ export default function Header() {
             <span>&times;</span>
           </div>
           <div className="dropdown-content">
+            <p className="menu-header">Triptes</p>
             <a className="header-link" href="/">
               Home
             </a>
