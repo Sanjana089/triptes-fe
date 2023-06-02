@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Header from "./Header";
 import "./Home.css";
 import Tours from "../data/Tours.json"
 import TourCard from "./TourCard";

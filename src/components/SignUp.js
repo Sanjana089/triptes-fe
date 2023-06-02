@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../Header";
+import Header from "./Header";
 import "./SignUp.css"; // Import the CSS file for styling
 
 const SignUp = () => {

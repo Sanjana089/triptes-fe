@@ -9,7 +9,9 @@ const Carousel = () => {
   const images = ["./2.png", "./3.jpg"]; // Array of image URLs
 
   useEffect(() => {
-    // Auto-advance the carousel every 4 seconds
+    carouselRef.current.style.height =
+      window.innerWidth > 900 ? "360px" : "200px";
+    // Auto-advance the carousel every 5 seconds
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
@@ -39,6 +41,7 @@ const Carousel = () => {
     // Clean up the event listener when the component unmounts
     return () => window.removeEventListener("resize", handleResize);
   });
+
   return (
     <div className="carousel" ref={carouselRef}>
       <div className="slides-container" ref={slidesContainerRef}>

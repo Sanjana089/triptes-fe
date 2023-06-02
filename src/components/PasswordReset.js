@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../Header";
+import Header from "./Header";
 import "./PasswordReset.css"; // Import the CSS file for styling
 
 const PasswordReset = () => {

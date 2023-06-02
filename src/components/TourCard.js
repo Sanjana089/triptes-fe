@@ -1,6 +1,5 @@
 import React from 'react';
 import './TourCard.css';
-import RatingStars from './RatingStars';
 
 export default function TourCard({ title, subtitle, price, rating, image }) {
   return (
@@ -13,7 +12,6 @@ export default function TourCard({ title, subtitle, price, rating, image }) {
         <h3 className="tour-card-subtitle">{subtitle}</h3>
         <div className="price-rating">
           <span className="price">Price per person<br/><h1>₹{price}</h1></span>
-          <span className="rating"><RatingStars rating={rating}/> <br/> Rating: {rating}</span>
         </div>
       </div>
     </div>
