@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect, useMemo } from "react";
 import "./Carousel.css";
 
 const Carousel = () => {
@@ -6,18 +6,31 @@ const Carousel = () => {
   const slidesContainerRef = useRef(null);
   const carouselRef = useRef(null);
 
-  const images = ["./2.png", "./3.jpg"]; // Array of image URLs
+  const images = useMemo(() => ["./2.png", "./3.jpg"], []); // Array of image URLs
 
   useEffect(() => {
-    carouselRef.current.style.height =
-      window.innerWidth > 900 ? "360px" : "200px";
-    // Auto-advance the carousel every 5 seconds
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    if (!carouselRef.current) return;
+
+    const firstImage = new Image();
+    firstImage.src = images[0];
+    firstImage.onload = () => {
+      const aspectRatio = firstImage.height / firstImage.width;
+
+      const updateHeight = () => {
+        carouselRef.current.style.height = `${carouselRef.current.clientWidth * aspectRatio}px`;
+      };
+
+      updateHeight(); // Set height initially
+    };
+
+    const interval = setInterval(
+      () => setActiveIndex((prevIndex) => (prevIndex + 1) % images.length),
+      5000
+    );
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images, carouselRef]);
+
 
   const handleDotClick = (index) => {
     setActiveIndex(index);

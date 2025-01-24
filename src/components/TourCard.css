@@ -54,6 +54,15 @@
 }
 
 @media (max-width: 1000px) {
+
+  .image-container {
+    margin-right: 0px;
+  }
+
+  .tour-card .image-container {
+    width: 100%;
+  }
+
   .tour-card-title {
     font-size: 2rem;
   }
